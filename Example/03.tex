@@ -2,6 +2,26 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Temp text
+\begin{pycode}[03]
+execfile('../ExamplePy/03/opg.py')
+\end{pycode}
+
+Solve exercise 02 with svd\\
+
+\begin{table}[h]
+	\centering
+		\begin{tabular}{ccc}
+			&Filip & Pontius\\
+			$x$&
+			$\pyc[03]{to_tex_t(Fx)}$ &
+			$\pyc[03]{to_tex_t(Px)}$ \\
+			residual error &
+			$\pyc[03]{print(Fre)}$ &
+			$\pyc[03]{print(Pre)}$ \\
+
+		\end{tabular}
+\end{table}
+
+\inputminted{python}{'../ExamplePy/03/opg.py'}
 	
 \end{document}
