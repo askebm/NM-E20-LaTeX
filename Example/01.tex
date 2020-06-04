@@ -2,6 +2,26 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Temp text
-	
+\begin{pycode}[01]
+execfile('../ExamplePy/01/opg.py')
+\end{pycode}
+
+Solve:
+\[
+A \cdot x = b
+\quad \textrm{where}\quad
+A=
+\pyc[01]{to_tex(A)}
+\quad
+b= 
+\pyc[01]{to_tex(b)}
+.\] 
+With LU decomposition.
+\[
+x=
+\pyc[01]{to_tex(x)}
+.\] 
+
+\inputminted{python}{../ExamplePy/01/opg.py}
+
 \end{document}

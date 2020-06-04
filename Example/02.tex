@@ -2,6 +2,32 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Temp text
+Solve Filip and Pontius data sets using Cholesky and LU:
+
+\begin{pycode}[02]
+execfile('../ExamplePy/02/opg.py')
+\end{pycode}
+
+\subsubsection*{Filip}%
+\label{ssub:filip}
+
+
+\begin{tabular}{cc}
+	LU&Cholesky\\
+	$\pyc[02]{to_tex_t(FxLU)}$ &
+	$\pyc[02]{to_tex_t(FxCho)}$ 
+\end{tabular}
+
+\subsubsection*{Pontius}%
+\label{ssub:pontius}
+
+\begin{tabular}{cc}
+	LU&Cholesky\\
+	$\pyc[02]{to_tex_t(PxLU)}$ &
+	$\pyc[02]{to_tex_t(PxCho)}$ 
+\end{tabular}
+
+\inputminted{python}{'../ExamplePy/02/opg.py'}
+
 	
 \end{document}

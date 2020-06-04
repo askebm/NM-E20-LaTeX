@@ -93,6 +93,12 @@
 \usepackage{pythontex}
 %\setpythontexlistingenv{minted}
 \setpythontexlistingenv{lllisting}
+\begin{pythontexcustomcode}{py}
+from past.builtins import execfile
+import array_to_latex as a2l
+to_tex = lambda A : a2l.to_ltx(A, frmt = '{:6.2f}', arraytype = 'bmatrix', mathform=True)
+to_tex_t = lambda A : a2l.to_ltx(np.array(A,ndmin=2).T, frmt = '{:6.2f}', arraytype = 'bmatrix', mathform=True)
+\end{pythontexcustomcode}
 
 
 %===================================================
