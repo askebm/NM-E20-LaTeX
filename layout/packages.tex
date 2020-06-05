@@ -98,6 +98,10 @@ from past.builtins import execfile
 import array_to_latex as a2l
 to_tex = lambda A : a2l.to_ltx(A, frmt = '{:6.2f}', arraytype = 'bmatrix', mathform=True)
 to_tex_t = lambda A : a2l.to_ltx(np.array(A,ndmin=2).T, frmt = '{:6.2f}', arraytype = 'bmatrix', mathform=True)
+def pandas_print(df,b,e,**kwargs):
+	index = range(b,df.last_valid_index()+e) if e < 0 else range(b,e)
+	print(df.loc[df.index.difference(index)].to_latex(**kwargs))
+
 \end{pythontexcustomcode}
 
 
@@ -165,3 +169,16 @@ to_tex_t = lambda A : a2l.to_ltx(np.array(A,ndmin=2).T, frmt = '{:6.2f}', arrayt
 %===================================================
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+
+
+%===================================================
+%============= booktabs ============================
+%===================================================
+\usepackage{booktabs}
+
+
+%===================================================
+%============= longtable ============================
+%===================================================
+\usepackage{longtable}
+

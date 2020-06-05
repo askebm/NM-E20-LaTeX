@@ -2,6 +2,19 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Temp text
-	
+\begin{pycode}[05]
+execfile('../ExamplePy/05/opg.py')
+\end{pycode}
+
+Solve $x-\cos (x) = 0$ using bisect in the interval:  $x_l=0$,  $x_h= \frac{\pi}{2} $.\\
+Use $10^{-8}$ for accuracy.\\
+Print a table with at least the following values: $k$, $x_k$, $d_k$.\\
+Where $dk=x_k-x_{k-1}$.
+
+\pyc[05]{pandas_print(bisect_df,5,-5,caption='Bisect')}
+\pyc[05]{pandas_print(secant_df,5,-5,caption='Secant')}
+\pyc[05]{pandas_print(false_position_df,5,-5,caption='False Position')}
+\pyc[05]{pandas_print(ridder_df,5,-5,caption='Ridder')}
+\pyc[05]{pandas_print(newton_df,5,-0,caption='Newton')}
+
 \end{document}
