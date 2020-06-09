@@ -100,7 +100,7 @@ to_tex = lambda A : a2l.to_ltx(A, frmt = '{:10.3e}', arraytype = 'bmatrix', math
 to_tex_t = lambda A : a2l.to_ltx(np.array(A,ndmin=2).T, frmt = '{:10.3e}', arraytype = 'bmatrix', mathform=True)
 def pandas_print(df,b,e,**kwargs):
 	index = range(b,df.last_valid_index()+e) if e < 0 else range(b,e)
-	print(df.loc[df.index.difference(index)].to_latex(**kwargs))
+	print(df.loc[df.index.difference(index)].to_latex(escape=False,**kwargs))
 \end{pythontexcustomcode}
 
 
