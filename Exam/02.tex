@@ -6,24 +6,28 @@
 execfile('../ExamPy/02/opg.py')	
 \end{pycode}
 
-\begin{enumerate}
-	\item \\
-		\[
-			f_1(0,0) = \pyc[02e]{pprint(f_0[0])}
-			\quad
-			f_2(0,0) = \pyc[02e]{pprint(f_0[1])}
-		.\] 
-	\item \\
-		 \[
-			 \Delta q_1 = \pyc[02e]{pprint(root[0])}
-			 \quad
-			 \Delta q_2 = \pyc[02e]{pprint(root[1])}
-		.\] 
-	\item \\
+\subsection*{I)}%
+\label{sub:i_}
+\[
+	f_1(0,0) = \pyc[02e]{pprint(f_0[0])}
+	\quad
+	f_2(0,0) = \pyc[02e]{pprint(f_0[1])}
+.\] 
+\subsection*{II)}%
+\label{sub:ii_}
 
-		\pyc[02e]{pandas_print(table,0,0)}
 
-\end{enumerate}
+\[
+	\Delta q_1 = \pyc[02e]{pprint(root[0])}
+	\quad
+	\Delta q_2 = \pyc[02e]{pprint(root[1])}
+.\] 
+\subsection*{III)}%
+\label{sub:iii_}
+\begin{center}
+\pyc[02e]{pandas_print(table,0,0)}
+\end{center}
+
 
 \inputminted{python}{../ExamPy/02/opg.py}
 

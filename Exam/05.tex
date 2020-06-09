@@ -2,6 +2,21 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-
+\[
+\begin{cases}
+	\dfrac{\mathrm{d}u_{j,k}}{\mathrm{d}t}(t) = \alpha
+	\left(
+		\dfrac{u_{j-1,k}-2u_{j,k}+u_{j+1,k}}{(\Delta x)^{2}}(t)
+		+
+		\dfrac{u_{j,k-1}-2u_{j,k}+u_{j,k+1}}{(\Delta y)^{2}}(t)
+	\right) +
+	f_{j,k}(t)
+	\quad
+	j,k = 1,\cdots,N-1\\
+	u_{j,k}(0)=0\\
+	u_{j,0}(t)=0;\quad u_{j,1}(t)=0\\
+	u_{0,k}(t)=0;\quad u_{1,k}(t)=0
+\end{cases}
+.\] 
 	
 \end{document}
