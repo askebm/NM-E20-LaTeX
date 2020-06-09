@@ -14,7 +14,8 @@
 \section{Software setup}%
 \label{sec:software_setup}
 
-\mintinline{bash}{python 3.8.3}.
+python version 3.8.3.\\
+
 Python packages:
 \begin{itemize}
 	\item numpy
@@ -22,9 +23,19 @@ Python packages:
 	\item pandas
 	\item sympy
 	\item matplotlib
+	\item sys
 \end{itemize}
+
+The nr\_python package must also be install for the scripts to work. This can be done with
+\mintinline{bash}{pip install --user -e .} when in the top level nr\_python directory.
 
 %\subfile{Example/main_example.tex}
 \subfile{Exam/main_exam.tex}
+
+\newpage
+\section{nr\_python}%
+\label{sec:nr_python}
+
+\inputminted{python}{../nr_python/nr_python/__init__.py}
 
 \end{document}
