@@ -2,10 +2,9 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-%\begin{pycode}[04]
-%execfile('../ExamplePy/04/opg.py')
-%\end{pycode}
-
+\begin{pycode}[04]
+execfile('../ExamplePy/04/opg.py')
+\end{pycode}
 
 \begin{itemize}
 	\item  Print the singular values and the condition number of the design matrix.
@@ -16,7 +15,17 @@
 	\item  Examine the impact of the singular value threshold on the error estimation.
 \end{itemize}
 
+The singular values are $\pyc[04]{to_tex(w)}$\\
 
+\begin{tabular}{cccc}
+	Threshold & Residual Error & Error & Result\\
+	$10^{-8} $ & $\pyc[04]{pprint(re0)}$ & $\pyc[04]{to_tex(e0)}$ &  $\pyc[04]{to_tex(x0)}$\\
+	$\pyc[04]{pprint(w[0])} $ & $\pyc[04]{pprint(re1)}$ & $\pyc[04]{to_tex(e1)}$ &  $\pyc[04]{to_tex(x1)}$\\
+	$\pyc[04]{pprint(w[1])} $ & $\pyc[04]{pprint(re2)}$ & $\pyc[04]{to_tex(e2)}$  & $\pyc[04]{to_tex(x2)}$\\
+	$\pyc[04]{pprint(w[2])} $ & $\pyc[04]{pprint(re3)}$ & $\pyc[04]{to_tex(e3)}$  & $\pyc[04]{to_tex(x3)}$\\
+\end{tabular}
+
+\inputminted{python}{../ExamplePy/04/opg.py}
 
 	
 \end{document}

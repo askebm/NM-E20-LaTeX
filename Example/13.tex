@@ -2,6 +2,16 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-Temp text
+Consider the elliptic partial differential equation
+\[
+	- \left( \frac{\partial ^{2}u}{\partial x^{2}} + \frac{\partial ^{2}u}{\partial y ^{2}} \right)
+	=1 +x +y \quad \textrm{for} \quad (x,y) \in \Omega
+.\] 
+Where $\Omega = {(x,y|0<x<1,0<y<1}$ and $u(x,y)=0$ for $(x,y) \in \partial \Omega$ 
+
+\begin{itemize}
+	\item Set up a system of linear equations for N = 4,8,16,... and solve
+	\item Perform Richardson extrapolation and error estimation for $u(0.5,0.5)$
+\end{itemize}
 	
 \end{document}
