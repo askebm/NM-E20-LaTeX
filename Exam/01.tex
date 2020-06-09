@@ -2,6 +2,33 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\begin{pycode}[e01]
+execfile('../ExamPy/01/opg.py')
+\end{pycode}
+
+\begin{enumerate}
+	\item \\
+		\[
+			\textbf{W}= \pyc[e01]{to_tex(np.diag(w))}
+		.\] 
+		\[
+			\textbf{V}=\pyc[e01]{to_tex(v)}
+		.\] 
+	\item \\
+		\[
+			\textbf{x} = \pyc[e01]{to_tex_t(x)}
+		.\] 
+		\[
+			\textrm{Relative residual error}=\pyc[e01]{pprint(re)}
+		.\] 
+	\item \\
+		\[
+			\textbf{y}=\pyc[e01]{to_tex_t(y)}
+		.\] 
+		The last column in v.
+\end{enumerate}
+
+\inputminted{python}{../ExamPy/01/opg.py}
 
 	
 \end{document}
