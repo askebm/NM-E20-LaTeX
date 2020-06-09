@@ -2,6 +2,28 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\begin{pycode}[04e]
+execfile('../ExamPy/04/opg.py')
+\end{pycode}
 
+\begin{enumerate}
+	\item \\
+		\pyc[04e]{pandas_print(table1,0,0)}
+	\item \\
+		\begin{gather*}
+			y(8)_{h=0.2} = \pyc[04e]{pprint(y1)}\\
+			y(8)_{h=0.1} = \pyc[04e]{pprint(y2)}
+		\end{gather*}
+		Because we assume correct order we can use Richardson to estimate the error for the
+		latter $y$. \\
+		\[
+			\frac{y(8)_{h=0.2}-y(8)_{h=0.1}}{2^{2}} = \pyc[04e]{pprint(richard_error)}
+		.\] 
+	\item\\
+		\begin{figure}[h]
+			\pyc[04e]{fig.savefig(sys.stdout,format='pgf')}
+		\end{figure}
+\end{enumerate}
 	
+
 \end{document}
