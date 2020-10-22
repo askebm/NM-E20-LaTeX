@@ -77,7 +77,7 @@
 %		The package that facilitates expressive syntax highlighting in LATEX using the powerful
 %		Pygments library. The package also provides options to customize the highlighted source
 %		code output using fancyvrb.
-\usepackage{minted}
+\usepackage[outputdir=build]{minted}
 \setminted{breaklines=true,frame=lines,obeytabs=true,tabsize=2}
 \setmintedinline{breaklines}
 
@@ -103,6 +103,8 @@ def pandas_print(df,b,e,**kwargs):
 	print(df.loc[df.index.difference(index)].to_latex(escape=False,**kwargs))
 \end{pythontexcustomcode}
 
+\setpythontexoutputdir{.}
+\setpythontexworkingdir{..}
 
 %===================================================
 %================= tikz ============================
